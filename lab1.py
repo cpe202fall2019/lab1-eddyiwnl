@@ -1,4 +1,5 @@
 
+
 def max_list_iter(int_list):  # must use iteration not recursion
    """finds the max of a list of numbers and returns the value (not the index)
    If int_list is empty, returns None. If list is None, raises ValueError"""
@@ -61,6 +62,8 @@ def bin_search(target, low, high, int_list):  # must use recursion
    if int_list == None:
       raise ValueError
 
+   if int_list == []:
+      return None
    if (target < int_list[low] or target > int_list[high]):
       return None
 
@@ -81,9 +84,10 @@ def bin_search(target, low, high, int_list):  # must use recursion
       else:
          return bin_search(target, mid + 1, high, int_list)
 
+'''
    else:
       # Element is not present in the array
-      return -1
-
+      return None
+'''
 
 
