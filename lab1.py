@@ -71,16 +71,12 @@ def bin_search(target, low, high, int_list):  # must use recursion
 
       mid = low + (high - low) // 2
 
-      # If element is present at the middle itself
       if int_list[mid] == target:
          return mid
 
-         # If element is smaller than mid, then it can only
-      # be present in left subarray
       elif int_list[mid] > target:
          return bin_search(target, low, mid - 1, int_list)
 
-         # Else the element can only be present in right subarray
       else:
          return bin_search(target, mid + 1, high, int_list)
 
